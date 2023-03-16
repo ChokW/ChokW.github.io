@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>代购计算器</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body >
+
+	<a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="font-size:28px;margin-top:-2px"></a>
+		<div class="container mt-3">
+			<div class="media border p-3">
+				<img src="http://www.nanreno.com/img/aHR0cDovL2ltZzAuaW1ndG4uYmRpbWcuY29tL2l0L3U9NDIxOTE2MDg5NSwzNTE4ODA1MjUzJmZtPTI2JmdwPTAuanBn.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;"> <!--图片-->
+				<div class="media-body">
+					<h4>
+						霓虹国代购税率计算
+					</h4>
+					<p>
+						<span class="badge badge-warning">
+							测试
+						</span>
+						单个商品或者总价
+					</p>
+				</div>
+			</div>
+		</div>
+
+	    <label> </label>
+		<div class="container mt-3">
+			<form action="/action_page.php">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">
+							&nbsp;金額&nbsp;
+						</span>
+					</div>
+					<input type="text" class="form-control" placeholder="税别価格" id="input1">
+					<div class="input-group-prepend">
+						<span class="input-group-text">
+							&nbsp;円&nbsp;
+						</span>
+					</div>
+				</div>
+				<button type="button" class="btn btn-info btn-block">
+					计算
+				</button>
+				<br>
+				<label> </label>
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" id="result" disabled="disabled">&nbsp;元&nbsp;
+				</div>
+			</form>
+		</div>
+
+		<script>
+			$(document).ready(function() {
+				$("button").click(function(){
+					var input1=$("#input1").val();
+						$("#result").attr("value",input1*0.0643);
+				});
+			});
+		</script>
+    </body>
+
+</html>
